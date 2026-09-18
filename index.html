@@ -3,55 +3,113 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kopi Nusantara - UMKM Pekalongan</title>
+    <title>Kophie - UMKM Pekalongan</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <main class="page">
-      <section class="hero">
-        <p class="eyebrow">UMKM Pekalongan</p>
-        <h1>KOPHIE</h1>
-        <p>Kopi lokal pilihan untuk teman belajar, bekerja, dan berdiskusi.</p>
-        <button id="promoButton" type="button">Lihat promo hari ini</button>
-        <div class="hero-info">
-          <div class="info-item">
-            <h2 class="label">Lokasi</h2>
-            <p>Rowolaku, Kec. Kajen, Kabupaten Pekalongan, Jawa Tengah 51161</p>
-          </div>
-          <div class="info-item">
-            <h3 class="label">Jam Operasional</h3>
-            <p class="hours">08:00 - 22:00 WIB</p>
+    <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="Navigasi utama">
+        <a class="brand" href="index.html">Kophie</a>
+        <ul>
+          <li><a aria-current="page" href="index.html">Beranda</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="beranda" class="page">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow">UMKM Pekalongan</p>
+          <h1 id="hero-title">Kophie</h1>
+          <p class="hero-desc">
+            Kophie menyajikan kopi lokal pilihan yang diracik khusus untuk
+            menemani setiap momen belajar, bekerja, dan berdiskusi Anda.
+          </p>
+          <button id="promoButton" type="button">Lihat promo hari ini</button>
+
+          <div class="hero-info">
+            <div class="info-card">
+              <div>
+                <h3 class="label">Lokasi</h3>
+                <p>
+                  Rowolaku, Kec. Kajen, Kabupaten Pekalongan, Jawa Tengah 51161
+                </p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div>
+                <h3 class="label">Jam Operasional</h3>
+                <p class="hours">08:00 - 22:00 WIB</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
+      <section id="profil" aria-labelledby="profil-title">
+        <h2 id="profil-title">Profil Singkat</h2>
+        <img
+          class="profile-image"
+          src="assets/images/profilen.webp"
+          alt="Secangkir kopi hitam di atas meja kayu"
+        />
+        <p>
+          Kophie hadir untuk menemani rutinitas harian Anda dengan menyuguhkan
+          kelezatan biji kopi pilihan dari para petani lokal. Kami berkomitmen
+          untuk selalu memberikan pelayanan yang hangat dan ramah demi
+          menciptakan pengalaman menikmati kopi yang istimewa setiap hari.
+        </p>
+        
+      </section>
+
       <section aria-labelledby="produk-title">
-        <h2 id="produk-title">Produk Unggulan</h2>
+        <h2 id="produk-title">Produk Best Seller</h2>
         <ul class="products">
           <li class="product-card">
-            <img src="webp/kopitubruk.webp" alt="Kopi Tubruk Signature" />
+            <img
+              src="assets/images/kopitubruksignaturen.webp"
+              alt="Kopi Tubruk Signature"
+            />
             <div class="product-info">
               <h3>Kopi Tubruk Signature</h3>
+              <p>
+                Nikmatnya rasa klasik berpadu aroma kuat, pilihan tepat untuk
+                mengawali hari.
+              </p>
               <p class="price">Rp18.000</p>
             </div>
           </li>
           <li class="product-card">
-            <img src="webp/kopisusu.webp" alt="Kopi Susu" />
+            <img src="assets/images/kopisusun.webp" alt="Kopi Susu" />
             <div class="product-info">
               <h3>Kopi Susu</h3>
+              <p>
+                Kelembutan susu dan pekatnya kopi berpadu sempurna dalam setiap
+                tegukan.
+              </p>
               <p class="price">Rp18.000</p>
             </div>
           </li>
           <li class="product-card">
-            <img src="webp/coldbrewaren.webp" alt="Cold Brew Aren" />
+            <img src="assets/images/coldbrewarenn.webp" alt="Cold Brew Aren" />
             <div class="product-info">
               <h3>Cold Brew Aren</h3>
+              <p>
+                Rasa kopi dingin dengan sentuhan manis gula aren untuk
+                membangkitkan semangat.
+              </p>
               <p class="price">Rp21.000</p>
             </div>
           </li>
         </ul>
       </section>
     </main>
+
+    <footer id="kontak" class="site-footer">
+      <p>Hubungi Kophie melalui WhatsApp: 0857-0181-1842</p>
+    </footer>
 
     <script src="js/script.js"></script>
   </body>
