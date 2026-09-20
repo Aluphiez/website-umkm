@@ -6,68 +6,95 @@
     <title>Tentang Kophie - Website UMKM</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
     <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+
     <header class="site-header">
       <nav class="nav" aria-label="Navigasi utama">
-        <a class="brand" href="index.html">Kophie</a>
-        <ul>
+        <a class="brand" href="index.html">
+          <img src="assets/logo/logokophie.svg" alt="Logo Kophie" />
+          <span>Kophie</span>
+        </a>
+
+        <ul class="nav-list">
           <li><a href="index.html">Beranda</a></li>
-          <li><a aria-current="page" href="tentang.html">Tentang Kami</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
+          <li>
+            <a class="active" aria-current="page" href="tentang.html">
+              Tentang Kami
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
-    <main id="konten" class="page">
-      <section aria-labelledby="tentang-title">
-        <p class="eyebrow">Cerita Usaha</p>
-        <h1 id="tentang-title">Tentang Kophie</h1>
-        <p>
-          Kophie hadir untuk menemani rutinitas harian Anda dengan menyuguhkan
-          kelezatan biji kopi pilihan dari para petani lokal. Kami berkomitmen
-          untuk selalu memberikan pelayanan yang hangat dan ramah demi
-          menciptakan pengalaman menikmati kopi yang istimewa setiap hari.
-        </p>
 
-        <div
-          style="
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            margin-top: 20px;
-          "
-        >
+    <main id="konten" class="page">
+      <section class="about-hero" aria-labelledby="tentang-title">
+        <div class="about-copy">
+          <p class="eyebrow">Cerita Usaha</p>
+
+          <h1 id="tentang-title">Tentang Kophie</h1>
+
+          <p class="about-desc">
+            Kophie hadir untuk menemani rutinitas harian Anda dengan menyuguhkan
+            kelezatan biji kopi pilihan dari para petani lokal. Kami berkomitmen
+            untuk selalu memberikan pelayanan yang hangat dan ramah demi
+            menciptakan pengalaman menikmati kopi yang istimewa setiap hari.
+          </p>
+        </div>
+
+        <div class="about-img-wrapper">
           <img
-            src="assets/images/profilen.webp"
-            alt="Produk Cup Kophie"
-            style="width: 80%; max-width: 600px; height: auto; display: block; margin-top: 20px;"
+            class="about-img"
+            src="assets/images/produk/profilen.webp"
+            alt="Tentang Kophie"
           />
         </div>
       </section>
-      <section aria-labelledby="nilai-title">
-        <h2 id="nilai-title">Nilai yang Kami Bawa</h2>
-        <ul>
-          <li style="font-weight: 600;">
-            Biji kopi pilihan
-          </li>
-          <p>Biji kopi pilihan terbaik dipanen langsung oleh para petani lokal di
-            sekitar kami. Melalui kerja sama yang erat, kami memastikan
-            kesejahteraan petani sekaligus menjaga kualitas biji kopi tetap
-            prima dari hulu ke hilir.</p>
-          <li style="font-weight: 600;">
-            Diproduksi dengan jumlah terbatas
-          </li>
-          <p>Setiap produk disangrai dan diproduksi dalam jumlah terbatas (small
-            batch). Metode ini memungkinkan kami untuk memberikan perhatian
-            penuh pada detail rasa, aroma, dan kesegaran di setiap kemasannya.</p>
-          <li style="font-weight: 600;">
-            Layanan cepat dan personal
-          </li>
-          <p>Nikmati pengalaman berbelanja yang hangat dan personal. Seluruh
-            proses pemesanan dan konsultasi produk dapat dilakukan secara
-            langsung melalui layanan WhatsApp kami.</p>
-        </ul>
+
+      <section class="section" aria-labelledby="nilai-title">
+        <div class="section-head">
+          <p class="eyebrow">Komitmen Kophie</p>
+          <h2 id="nilai-title">Nilai yang Kami Bawa</h2>
+          <p>
+            Prinsip yang kami jaga dalam setiap sajian dan pelayanan Kophie.
+          </p>
+        </div>
+
+        <div class="values">
+          <article class="value-card">
+            <span class="value-number">01</span>
+            <h3>Biji Kopi Pilihan</h3>
+            <p>
+              Biji kopi pilihan terbaik dipanen langsung oleh para petani lokal.
+              Kami menjaga kualitas biji kopi dari hulu hingga menjadi sajian
+              kopi yang nikmat.
+            </p>
+          </article>
+
+          <article class="value-card">
+            <span class="value-number">02</span>
+            <h3>Small Batch</h3>
+            <p>
+              Setiap produk diproses dalam jumlah terbatas agar rasa, aroma, dan
+              kesegaran dapat tetap terjaga pada setiap sajian.
+            </p>
+          </article>
+
+          <article class="value-card">
+            <span class="value-number">03</span>
+            <h3>Layanan Personal</h3>
+            <p>
+              Kami memberikan pelayanan yang hangat, cepat, dan personal untuk
+              menciptakan pengalaman menikmati kopi yang menyenangkan.
+            </p>
+          </article>
+        </div>
       </section>
     </main>
+
     <footer class="site-footer">
       <p>&copy; 2026 Kophie. Kopi Lokal Pilihan</p>
     </footer>
