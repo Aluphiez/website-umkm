@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kontak Kophie - Website UMKM</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/form.js" defer></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Navigasi utama">
+        <a class="brand" href="index.html">
+          <img src="assets/logo/logokophie.svg" alt="Logo Kophie" />
+          <span>Kophie</span>
+        </a>
+
+        <ul class="nav-list">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li>
+            <a class="active" aria-current="page" href="kontak.html">
+              Kontak
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="konten" class="page">
+      <section class="about-hero" aria-labelledby="tentang-title">
+        <div class="about-copy">
+          <p class="eyebrow">UMKM Pekalongan</p>
+
+          <h1 id="tentang-title">Hubungi Kophie</h1>
+
+          <p class="about-desc">
+            Pintu kami selalu terbuka untuk segala pertanyaan, saran, kritik
+            membangun, maupun reservasi acara dari Anda. Silakan hubungi kami
+            kapan saja dan mari wujudkan momen istimewa atau berbincang hangat
+            bersama Kophie.
+          </p>
+        </div>
+
+        <div class="about-img-wrapper">
+          <img
+            class="about-img"
+            src="assets/images/header/kophie.svg"
+            alt="Logo Kophie"
+          />
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="kontak-title">
+        <div class="contact-wrapper">
+          <form id="form-kontak" action="#" method="post" class="contact-form">
+            <div class="field">
+              <label for="nama">Nama Lengkap</label>
+              <input
+                id="nama"
+                name="nama"
+                type="text"
+                required
+                minlength="3"
+                placeholder="Masukkan nama Anda"
+              />
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                placeholder="nama@email.com"
+              />
+            </div>
+
+            <div class="field">
+              <label for="telepon">Nomor Telepon</label>
+              <input
+                id="telepon"
+                name="telepon"
+                type="tel"
+                placeholder="08xxxxxxxxxx"
+              />
+            </div>
+
+            <div class="field">
+              <label for="paket">Kategori Paket</label>
+              <select id="paket" name="paket" required>
+                <option value="">Pilih Paket / Layanan</option>
+                <option value="Kophie In">Paket Kophie In</option>
+                <option value="Kophie Out">Paket Kophie Out</option>
+                <option value="Layanan Reservasi">Layanan Reservasi</option>
+                <option value="Lainnya">Lainnya</option>
+              </select>
+            </div>
+
+            <fieldset class="field-fieldset">
+              <legend>Topik Pertanyaan</legend>
+              <div class="radio-group">
+                <label
+                  ><input type="radio" name="topik" value="produk" required />
+                  Produk</label
+                >
+                <label
+                  ><input type="radio" name="topik" value="pesanan" />
+                  Pesanan</label
+                >
+                <label
+                  ><input type="radio" name="topik" value="kerja-sama" /> Kerja
+                  sama</label
+                >
+                <label
+                  ><input type="radio" name="topik" value="saran" />
+                  Saran</label
+                >
+                <label
+                  ><input type="radio" name="topik" value="kritik" />
+                  Kritik</label
+                >
+              </div>
+            </fieldset>
+
+            <fieldset class="field-fieldset">
+              <legend>Pilih Waktu Kontak</legend>
+              <div class="radio-group">
+                <label
+                  ><input type="radio" name="waktu" value="Pagi (08.00-10.00)" required />
+                  Pagi (08.00-10.00)</label
+                >
+                <label
+                  ><input type="radio" name="waktu" value="Siang (11.00-13.00)" />
+                  Siang (11.00-13.00)</label
+                >
+                <label
+                  ><input type="radio" name="waktu" value="Sore (15.00-18.00)" />
+                  Sore (15.00-18.00)</label
+                >
+                <label
+                  ><input type="radio" name="waktu" value="Pagi (19.00-21.00)" />
+                  Malam (19.00-21.00)</label
+                >
+              </div>
+            </fieldset>
+
+            
+
+            <div class="field">
+              <label for="pesan">Pesan</label>
+              <textarea
+                id="pesan"
+                name="pesan"
+                rows="4"
+                required
+                minlength="10"
+                placeholder="Tuliskan pesan Anda di sini..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Lihat Preview</button>
+          </form>
+
+          <div class="sidebar-right">
+            <section class="preview-section" aria-labelledby="info-title">
+              <h2 id="info-title">Informasi Singkat</h2>
+
+              <div class="info-item">
+                <p class="info-label">Lokasi</p>
+                <p class="info-value">
+                  Rowolaku, Kecamatan Kajen, Kabupaten Pekalongan, Jawa Tengah
+                  51161
+                </p>
+              </div>
+
+              <hr class="info-divider" />
+
+              <div class="info-item">
+                <p class="info-label">Jam Layanan</p>
+                <p class="info-value">08.00 - 22.00 WIB</p>
+              </div>
+
+              <hr class="info-divider" />
+              <div class="info-item">
+                <p class="info-label">WhatsApp</p>
+                <a
+                  class="info-link"
+                  href="https://wa.me/+6285701811842?text=Halo%20Kophie,%20saya%20ingin%20bertanya%20tentang%20beberapa%20hal"
+                  target="_blank"
+                  >Klik untuk hubungi Kophie via WhatsApp</a
+                >
+              </div>
+            </section>
+
+            <section class="preview-section" aria-labelledby="preview-title">
+              <h2 id="preview-title">Preview Data</h2>
+              <pre id="preview">
+Data form akan muncul setelah tombol "Lihat Preview" diklik.</pre
+              >
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Kophie. Kopi Lokal Pilihan</p>
+    </footer>
+  </body>
+</html>
