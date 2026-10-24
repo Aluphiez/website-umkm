@@ -103,12 +103,71 @@ textarea:focus-visible {
   object-fit: contain;
 }
 
+.nav-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  width: 100%;
+}
+
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: calc(var(--space-5) + var(--space-2));
+  height: calc(var(--space-5) + var(--space-2));
+  padding: 0;
+  color: var(--color-primary-strong);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.nav-toggle:hover {
+  background-color: var(--color-surface-soft);
+}
+
+.nav-toggle-icon {
+  display: block;
+  width: var(--space-4);
+  height: var(--space-4);
+  background:
+    linear-gradient(currentColor, currentColor) 0 15% / 100% 2px no-repeat,
+    linear-gradient(currentColor, currentColor) 0 50% / 100% 2px no-repeat,
+    linear-gradient(currentColor, currentColor) 0 85% / 100% 2px no-repeat;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-icon {
+  background:
+    linear-gradient(
+      45deg,
+      transparent calc(50% - 1px),
+      currentColor calc(50% - 1px) calc(50% + 1px),
+      transparent calc(50% + 1px)
+    ),
+    linear-gradient(
+      -45deg,
+      transparent calc(50% - 1px),
+      currentColor calc(50% - 1px) calc(50% + 1px),
+      transparent calc(50% + 1px)
+    );
+}
+
+.js .nav-toggle {
+  display: inline-flex;
+}
+.js .nav-list:not(.is-open) {
+  display: none;
+}
+
 .nav-list {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: flex-start;
-  gap: var(--space-2);
+  gap: 0;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -116,6 +175,8 @@ textarea:focus-visible {
 
 .nav-list a {
   position: relative;
+  display: block;
+  padding: calc(var(--space-2) - 2px) 0;
   color: var(--color-text);
   font-size: 0.95rem;
   font-weight: 600;
@@ -129,16 +190,7 @@ textarea:focus-visible {
 .nav-list a.active,
 .nav-list a[aria-current="page"] {
   color: var(--color-primary);
-}
-
-.nav-list a.active::after,
-.nav-list a[aria-current="page"]::after {
-  content: "";
-  position: absolute;
-  inset: auto 0 -7px;
-  height: 2px;
-  border-radius: var(--radius-sm);
-  background-color: var(--color-primary);
+  font-weight: 800;
 }
 
 .page {
@@ -369,7 +421,7 @@ article.product-card p.price {
   outline-offset: 3px;
 }
 .table-scroll table {
-  min-width: 40rem;
+  min-width: 0;
 }
 
 .price-table-wrap thead {
@@ -401,6 +453,36 @@ article.product-card p.price {
 }
 .price-table-wrap td.price-cell {
   color: var(--color-primary);
+}
+
+/* Tabel harga: muat tanpa scroll di layar kecil */
+.price-table-wrap table {
+  table-layout: fixed;
+}
+.price-table-wrap th,
+.price-table-wrap td {
+  overflow-wrap: anywhere;
+}
+.price-table-wrap th:nth-child(1) {
+  width: 40%;
+}
+.price-table-wrap th:nth-child(2) {
+  width: 32%;
+}
+.price-table-wrap th:nth-child(3) {
+  width: 28%;
+}
+.price-table-wrap td.price-cell {
+  white-space: nowrap;
+}
+
+@media (max-width: 30rem) {
+  .price-table-wrap th,
+  .price-table-wrap td {
+    padding: var(--space-2) 0.4rem;
+    font-size: 0.8rem;
+    line-height: 1.35;
+  }
 }
 
 #promoButton,
@@ -757,10 +839,33 @@ article.product-card p.price {
 }
 
 @media (min-width: 42rem) {
+  .js .nav-toggle {
+    display: none;
+  }
+  .js .nav-list:not(.is-open) {
+    display: flex;
+  }
   .nav-list {
     flex-direction: row;
     align-items: center;
     gap: var(--space-1) var(--space-4);
+  }
+  .nav-list a {
+    display: inline;
+    padding: 0;
+  }
+  .nav-list a.active,
+  .nav-list a[aria-current="page"] {
+    font-weight: 600;
+  }
+  .nav-list a.active::after,
+  .nav-list a[aria-current="page"]::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 -7px;
+    height: 2px;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-primary);
   }
   .category-list,
   .gallery-grid,
@@ -797,6 +902,9 @@ article.product-card p.price {
     position: sticky;
     top: 0;
     z-index: 1000;
+  }
+  .nav-top {
+    width: auto;
   }
   .nav {
     flex-direction: row;

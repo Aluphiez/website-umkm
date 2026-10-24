@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Kontak Kophie - Website UMKM</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/nav.js"></script>
     <script src="js/form.js" defer></script>
   </head>
 
@@ -13,12 +14,24 @@
 
     <header class="site-header">
       <nav class="nav" aria-label="Navigasi utama">
-        <a class="brand" href="index.html">
-          <img src="assets/logo/logokophie.svg" alt="Logo Kophie" width="34" height="34" />
-          <span>Kophie</span>
-        </a>
+        <div class="nav-top">
+          <a class="brand" href="index.html">
+            <img src="assets/logo/logokophie.svg" alt="Logo Kophie" width="34" height="34" />
+            <span>Kophie</span>
+          </a>
 
-        <ul class="nav-list">
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+            aria-label="Menu navigasi"
+          >
+            <span class="nav-toggle-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <ul class="nav-list" id="nav-menu">
           <li><a href="index.html">Beranda</a></li>
           <li><a href="produk.html">Produk</a></li>
           <li><a href="galeri.html">Galeri</a></li>
